@@ -15,8 +15,9 @@ Leé `README.md` y `docs/` antes de tocar código. El producto es un **agente de
 3. Capacidades = plan × rol × módulos. Job types en `docs/PRINT-JOBS.md`.
 4. El contrato localhost (`docs/LOCAL-API.md`) es la interfaz de **todas** las apps de la familia. Breaking change = `/v2`.
 5. v1 es Windows, una impresora por PC, térmico 58/80 mm.
-6. No integres Frig hasta el corte 4 del roadmap.
-7. No subas tokens ni PDFs de clientes.
+6. Stack cerrado: Tauri 2 + React + motor Rust (pdfium raster → RAW). No plugins de print de terceros como motor.
+7. No integres Frig hasta el corte 4 del roadmap.
+8. No subas tokens ni PDFs de clientes.
 
 ## Issues
 

@@ -22,6 +22,8 @@ Y Print imprime ese PDF 1:1, sin diálogo de Chrome. El local solo elige el anch
 
 Yggdra genera el documento (logo, montos, timbre SII). Y Print no redibuja boletas. Imprime. Las capacidades que ve el usuario salen de `login_complete` + `frontend-config` (plan × rol × módulos).
 
+**Stack (cerrado):** Tauri 2 + UI React + motor Rust (pdfium → RAW). Detalle en [ARCHITECTURE](docs/ARCHITECTURE.md).
+
 ## Documentación
 
 | Doc | Contenido |

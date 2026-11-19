@@ -39,15 +39,28 @@ Fuente: `api/apps/shared/pdf/thermal_format.py` en `yggdra_arq` (`PLAN_58MM.md`)
 
 El margen que “siempre sale mal” en Frig es el **segundo** margen: Chrome / diálogo de Windows. El motor de Y Print imprime a escala 100 %, papel = ancho del PDF, sin encabezados.
 
-## Stack v1
+## Stack v1 (cerrado)
+
+Tauri **es** Rust + UI web. No se elige uno u otro.
 
 | Capa | Elección | Por qué |
 |------|----------|---------|
-| Shell | Tauri 2, Windows | Instalador chico, bandeja, UI con React (misma familia que Frig) |
-| UI | React | Login, sucursal, impresoras, capacidades, pairing |
-| Motor de print | API de impresión de Windows + PDF a tamaño de página | 1:1 con el PDF de Yggdra |
+| Shell | Tauri 2, Windows | Instalador chico, bandeja, WebView2 ya está en Win10/11 |
+| UI | React | Login, sucursal, pairing, tema de familia (mismo lenguaje que Frig) |
+| Motor | Rust | pdfium raster 203 DPI al mm exacto → bytes RAW (`WritePrinter` o TCP 9100) |
 | Auth persistida | Windows Credential Manager | El Token de DRF no va a un `.env` en disco |
-| HTTP local | `127.0.0.1` loopback, origen emparejado | Las SPAs de la familia llaman desde el browser |
+| HTTP local | Axum/hyper en el proceso Tauri, `127.0.0.1:17380` | Vive con la bandeja, ventana cerrada |
+
+El CPU de una boleta no importa. Lo que importa es que el driver **no** “ajuste a la página”. Raster → RAW evita el segundo margen (Chrome / spooler / `scale: fit`).
+
+**No usar** como motor:
+
+- `tauri-plugin-printer` (Sumatra + fit = el mismo margen)
+- `tauri-plugin-thermal-printer` (ESC/POS texto: el timbre SII no cabe)
+
+Esos plugins pueden listar impresoras; el job de boleta lo escribe este repo.
+
+Rust puro (egui) se descarta: el motor saldría igual, la UI de producto no. Electron se descarta por peso de agente de bandeja.
 
 Linux / macOS quedan para cuando haya un local que los pida. El contrato localhost no cambia.
 

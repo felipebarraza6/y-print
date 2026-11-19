@@ -19,7 +19,7 @@ Shell Tauri Windows, bandeja, ventana login/sucursal placeholder, health HTTP en
 
 ## Corte 3 — Motor + impresoras
 
-Listar impresoras Windows. Elegir default + 58/80. Imprimir PDF 1:1. Botón “página de prueba”.
+Listar impresoras Windows. Elegir default + 58/80. Motor propio: pdfium raster 203 DPI → RAW a la térmica (no plugin de print, no Sumatra fit). Botón “página de prueba”.
 
 ## Corte 4 — Contrato localhost
 
