@@ -11,11 +11,11 @@ Si el PDF se ve aireado: issue en `yggdra_arq` para bajar márgenes, **además**
 
 ## Corte 1 — App nativa vacía
 
-Shell Tauri Windows, bandeja, ventana login/sucursal placeholder, health HTTP en `17380`.
+Shell Tauri Windows, bandeja, ventana **muda** (título `Impresión`, glifo de impresora). Health HTTP en `17380`. Sin wordmark.
 
-## Corte 2 — Identidad Yggdra
+## Corte 2 — Identidad Yggdra + skin
 
-`login_complete`, token en Credential Manager, `X-Branch-ID`, `frontend-config`, UI de capacidades según módulos. Base URL configurable.
+`login_complete`, token en Credential Manager, `X-Branch-ID`, `frontend-config`, capacidades según módulos, **marca mudo** (`docs/BRAND.md`): logo/nombre/color de la app configurada en esa sucursal.
 
 ## Corte 3 — Motor + impresoras
 
@@ -31,7 +31,7 @@ Y Print baja el PDF a Yggdra (reimprimir desde la bandeja). Mapa `PRINT-JOBS.md`
 
 ## Corte 6 — Instalador
 
-MSI / NSIS, auto-start, icono de familia. Code signing queda issue aparte (SmartScreen).
+MSI / NSIS, auto-start. Nombre de **binario** `Y Print`. UI y bandeja siguen [BRAND.md](BRAND.md) (mudo). Code signing queda issue aparte (SmartScreen).
 
 ## Después (cuando un producto lo pida)
 

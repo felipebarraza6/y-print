@@ -29,6 +29,7 @@ Yggdra genera el documento (logo, montos, timbre SII). Y Print no redibuja bolet
 | Doc | Contenido |
 |-----|-----------|
 | [docs/VISION.md](docs/VISION.md) | Producto de familia, no solo Frig |
+| [docs/BRAND.md](docs/BRAND.md) | Marca mudo: skin de la app del usuario |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Piezas, flujo, stack |
 | [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) | Requisitos extraídos de Frig + Yggdra |
 | [docs/AUTH-AND-PERMISSIONS.md](docs/AUTH-AND-PERMISSIONS.md) | Login, sucursal, qué se muestra |

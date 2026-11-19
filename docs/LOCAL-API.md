@@ -46,11 +46,14 @@ El usuario confirma en la bandeja la primera vez. Revocar: Y Print → Emparejam
   "printer_id": "usb:EPSON-TM-T20",
   "printer_name": "EPSON TM-T20",
   "capabilities": ["thermal.boleta", "thermal.ticket", "thermal.voucher"],
-  "paired_origins": ["http://localhost:3000"]
+  "paired_origins": ["http://localhost:3000"],
+  "app_name": "FRIG"
 }
 ```
 
 `paper_mm` es `58` o `80`. La SPA pide el PDF con `pdf_format=thermal_58` o `thermal`.
+
+`app_name` es el nombre ya resuelto del tema (marca mudo). La SPA dice “conectado a Impresión · {app_name}”, no “conectado a Y Print”.
 
 `capabilities` ya viene filtrado por permisos de la sesión del agente. Si el agente no está logueado, `capabilities` puede ser `[]` y igual se aceptan jobs **blob** de origins emparejados (el documento lo trajo la SPA con *su* permiso).
 

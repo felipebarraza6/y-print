@@ -36,7 +36,7 @@ El diálogo de Chrome desaparece para boleta/voucher/comanda. El ticket simple T
 
 ## Cambios de UI en Frig (cuando toque)
 
-1. **Ajustes de estación** (`PosConfigModal`): switch “Imprimir al cobrar”, estado Y Print (conectado / emparejar / no instalado), link de descarga del instalador.
+1. **Ajustes de estación** (`PosConfigModal`): switch “Imprimir al cobrar”, estado del agente (conectado / emparejar / no instalado) con `app_name` de `/v1/status`, link al instalador. Copy de caja: “agente de impresión”, no “Y Print” en cada pantalla.
 2. **PostSaleModal**: botón Imprimir usa Y Print; se oculta o se degrada “Imprimir ticket simple” Chrome.
 3. **Ventas / pagos / ingresos**: acción Imprimir al lado de Descargar, mismo `POST /v1/print`.
 

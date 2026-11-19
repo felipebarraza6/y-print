@@ -49,7 +49,7 @@ De ahí sale lo que la UI de Y Print enciende:
 | `modules[name].is_enabled` | El job type de ese módulo existe o no |
 | `permissions` | Read vs write (reimprimir vs solo ver estado) |
 | `role` / `user_role` | Copy (cajero vs owner) |
-| `organizationTheme` | Colores/logo de la ventana nativa (familia white-label) |
+| `organizationTheme` | Skin mudo: `app_name`, logo, `primary_color`, favicon. Ver [BRAND.md](BRAND.md). |
 
 `GET /api/shared/module-permissions/module-catalog/` es opcional (metadatos). No es el runtime.
 

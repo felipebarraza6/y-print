@@ -19,7 +19,7 @@ Si el agente fuera “Frig Print”, cada producto nuevo repetiría instalador, 
 | Y Print | Proceso nativo en el PC de la impresora |
 | Otros frontends | Mismos headers, mismas sucursales, otros módulos |
 
-El prefijo **Y** marca pertenencia a Yggdra, igual que la API. No es un plugin de un solo POS.
+El prefijo **Y** es de familia técnica (repo, exe, About). En caja la marca es **muda**: se ve la app del usuario (`app_name` / logo / color de `frontend-config`). Detalle: [BRAND.md](BRAND.md).
 
 ## Qué ve el usuario
 

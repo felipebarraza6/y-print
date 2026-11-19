@@ -50,6 +50,7 @@ Tauri **es** Rust + UI web. No se elige uno u otro.
 | Motor | Rust | pdfium raster 203 DPI al mm exacto → bytes RAW (`WritePrinter` o TCP 9100) |
 | Auth persistida | Windows Credential Manager | El Token de DRF no va a un `.env` en disco |
 | HTTP local | Axum/hyper en el proceso Tauri, `127.0.0.1:17380` | Vive con la bandeja, ventana cerrada |
+| Marca | Muda + `organizationTheme` | [BRAND.md](BRAND.md): exe Y Print, UI = app del usuario |
 
 El CPU de una boleta no importa. Lo que importa es que el driver **no** “ajuste a la página”. Raster → RAW evita el segundo margen (Chrome / spooler / `scale: fit`).
 
